@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - Mega Book's</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        
+        .testimonials {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .testimonial-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card h5 {
+            font-weight: bold;
+        }
+
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-links a {
+            color: #6c757d;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-social a {
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+
+        
+        .btn-cerrar-sesion {
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+        }
+
+        .btn-cerrar-sesion:hover {
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo_bookpng.png" alt="Logo" width="40" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Comunidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-cerrar-sesion ml-2" href="#">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="header">
+        <h1>Comunidad</h1>
+        <p>¡Comparte y disfruta!</p>
+    </section>
+
+    
+    <section class="container testimonials">
+        <h3>Testimonios</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="img/default-user.png" alt="Foto de usuario">
+                    <h5>María González</h5>
+                    <p>Excelente selección de libros</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="img/default-user.png" alt="Foto de usuario">
+                    <h5>Carlos Medina</h5>
+                    <p>"La interfaz es intuitiva y rápida."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="img/default-user.png" alt="Foto de usuario">
+                    <h5>Laura Pérez</h5>
+                    <p>Gran variedad de géneros</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="img/default-user.png" alt="Foto de usuario">
+                    <h5>Daniel Torres</h5>
+                    <p>Perfecta para descubrir nuevos autores</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="img/default-user.png" alt="Foto de usuario">
+                    <h5>Luis Ramírez</h5>
+                    <p>Gracias a esta página he disfrutado de los mejores libros.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="img/default-user.png" alt="Foto de usuario">
+                    <h5>Gabriela Fernández</h5>
+                    <p>Experiencia de lectura inmersiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="row">
+                <div class="col-md-4 footer-links">
+                    <h5>Links relacionados</h5>
+                    <a href="#">xxxxxxxxxx</a>
+                    <a href="#">xxxxxxxxxx</a>
+                    <a href="#">xxxxxxxxxx</a>
+                </div>
+                <div class="col-md-4 footer-links">
+                    <h5>Explorar</h5>
+                    <a href="#">xxxxxxxxxx</a>
+                    <a href="#">xxxxxxxxxx</a>
+                    <a href="#">xxxxxxxxxx</a>
+                </div>
+                <div class="col-md-4 footer-links">
+                    <h5>Otros enlaces</h5>
+                    <a href="#">xxxxxxxxxx</a>
+                    <a href="#">xxxxxxxxxx</a>
+                    <a href="#">xxxxxxxxxx</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

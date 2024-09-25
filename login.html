@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            flex-direction: column;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .header-logo img {
+            width: 50px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer .row {
+            margin: 0;
+        }
+        .footer h5 {
+            margin-bottom: 15px;
+        }
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        .footer-links a {
+            display: block;
+            color: #6c757d;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-social a {
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+        body {
+            background-image: url('../img/opened-book-4278.png');
+            background-size: 1100px 250px; 
+            background-position: top 600px center; 
+            background-repeat: no-repeat; 
+        }
+        
+        .btn-outline-primary.custom-button {
+            color: black; 
+            background-color: white; 
+            border: 1px solid black; 
+        }
+
+        
+        .btn-outline-primary.custom-button:hover {
+            color: white; 
+            background-color: black; 
+            border: 1px solid black; 
+        }
+         
+        .btn-primary.custom-button {
+            color: white; 
+            background-color: black; 
+            border: 1px solid black; 
+        }
+
+        
+        .btn-primary.custom-button:hover {
+            color: black; 
+            background-color: white; 
+            border: 1px solid black; 
+        }
+        a {
+            color: inherit; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            color: inherit; 
+            text-decoration: underline; 
+        }
+
+    </style>
+</head>
+<body>
+
+
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo_bookpng.png" alt="Logo" width="40" height="40">
+        </a>        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Libros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Comunidad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary ml-2 custom-button" href="#">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary ml-2 custom-button" href="#">Iniciar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<div class="container login-container">
+    <h1 class="mb-4">Iniciar sesión</h1>
+    <form class="login-form">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+        </div>
+        <button type="submit" class="btn btn-dark btn-block">Ingresar</button>
+        <div class="text-center mt-3">
+            <a href="#">¿Olvidó su usuario?</a>
+        </div>
+    </form>
+    
+    <img src="img/book.png" alt="" class="img-fluid mt-5">
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="row">
+            <div class="col-md-4 footer-links">
+                <h5>Links relacionados</h5>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+            </div>
+            <div class="col-md-4 footer-links">
+                <h5>Explorar</h5>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+            </div>
+            <div class="col-md-4 footer-links">
+                <h5>Otros enlaces</h5>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+                <a href="#">xxxxxxxxxx</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
