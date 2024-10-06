@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libros - Mega Book's</title>
-    
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        
+        .btn-outline-primary.logout-button {
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .btn-outline-primary.logout-button:hover {
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+        }
+
         .login-container {
             display: flex;
             justify-content: center;
@@ -15,192 +27,218 @@
             min-height: 80vh;
             flex-direction: column;
         }
+
         .login-form {
             width: 100%;
             max-width: 400px;
             padding: 15px;
             margin: 0 auto;
         }
+
         .header-logo {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
+
         .header-logo img {
             width: 50px;
         }
+
         .footer {
             text-align: center;
             padding: 20px 0;
             background-color: #f8f9fa;
             border-top: 1px solid #e9ecef;
         }
+
         .footer .row {
             margin: 0;
         }
+
         .footer h5 {
             margin-bottom: 15px;
         }
+
         .footer-links {
             margin-bottom: 15px;
         }
+
         .footer-links a {
             display: block;
             color: #6c757d;
             text-decoration: none;
         }
+
         .footer-links a:hover {
             text-decoration: underline;
         }
+
         .footer-social {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-bottom: 15px;
         }
+
         .footer-social a {
             color: #6c757d;
             font-size: 1.2rem;
         }
-        
+
         .btn-outline-primary.custom-button {
-            color: black; 
-            background-color: white; 
-            border: 1px solid black; 
+            color: black;
+            background-color: white;
+            border: 1px solid black;
         }
-    
-        
+
+
         .btn-outline-primary.custom-button:hover {
-            color: white; 
-            background-color: black; 
-            border: 1px solid black; 
+            color: white;
+            background-color: black;
+            border: 1px solid black;
         }
-    
-        
+
+
         .btn-primary.custom-button {
-            color: white; 
-            background-color: black; 
-            border: 1px solid black; 
+            color: white;
+            background-color: black;
+            border: 1px solid black;
         }
-    
-        
+
+
         .btn-primary.custom-button:hover {
-            color: black; 
-            background-color: white; 
-            border: 1px solid black; 
+            color: black;
+            background-color: white;
+            border: 1px solid black;
         }
-    
+
         a {
-            color: inherit; 
-            text-decoration: none; 
+            color: inherit;
+            text-decoration: none;
         }
-    
+
         a:hover {
-            color: inherit; 
-            text-decoration: underline; 
+            color: inherit;
+            text-decoration: underline;
         }
-    
-        
+
+
         .navbar {
             background-color: #fff;
             border-bottom: 1px solid #ddd;
         }
+
         .navbar-brand img {
             width: 40px;
         }
+
         .navbar-nav .nav-link {
             color: #333;
             font-weight: bold;
         }
+
         .navbar-nav .btn {
             margin-left: 10px;
         }
-    
-        
+
+
         .header {
             text-align: center;
             padding: 40px 0;
         }
+
         .header h1 {
             font-size: 3rem;
             font-weight: bold;
         }
+
         .header p {
             font-size: 1.25rem;
         }
-    
-        
+
+
         .section-news {
             padding: 60px 0px 0px 0px;
         }
+
         .section-news h2 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 40px;
         }
+
         .news-item {
             padding: 20px;
             border: 1px solid #ddd;
             margin-bottom: 20px;
             background-color: #f9f9f9;
         }
+
         .news-item h5 {
             font-weight: bold;
         }
+
         .news-item p {
             font-size: 0.9rem;
         }
-    
-        
+
+
         .footer {
             background-color: #f8f9fa;
             padding: 40px 0;
             text-align: center;
         }
+
         .footer .social-icons a {
             margin: 0 15px;
             font-size: 1.5rem;
             color: #333;
         }
+
         .footer-links {
             margin-top: 20px;
         }
+
         .footer-links a {
             display: block;
             color: #6c757d;
             text-decoration: none;
             margin-bottom: 5px;
         }
+
         .footer-links a:hover {
             text-decoration: underline;
         }
+
         .section-news h2 {
             font-size: 2rem;
             text-align: center;
-            margin-bottom: 0; 
+            margin-bottom: 0;
         }
 
         .section-news p {
             text-align: center;
-            margin-top: 0; 
+            margin-top: 0;
         }
-
     </style>
 </head>
+
 <body>
 
-    
+
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="img/logo_bookpng.png" alt="Logo" width="40" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" id="nav-items">
                     <li class="nav-item">
                         <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
@@ -213,32 +251,39 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contacto</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"></li>
+                    <a class="nav-link" id="admin-button" style="display: none;" href="./admin.html">Administrar</a>
+                    </li>
+                    <li class="nav-item" id="register-button">
                         <a class="btn btn-outline-primary ml-2 custom-button" href="./register.html">Registrarse</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="login-button">
                         <a class="btn btn-primary ml-2 custom-button" href="./login.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item" id="logout-button" style="display: none;">
+                        <button class="btn btn-outline-primary ml-2 custom-button logout-button" id="logout">Cerrar
+                            sesión</button>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
 
-    
+
     <section class="header">
         <h1>Libros</h1>
         <p>Colección</p>
     </section>
 
-    
+
     <section class="container book-list">
         <div class="book-item">
             <img src="img/default-book.png" alt="Portada de El Eco del Silencio">
             <div class="book-info">
                 <h5>El Eco del Silencio</h5>
                 <p>Género: Misterio<br>
-                   Fecha de publicación: 15 de marzo de 2021<br>
-                   Precio: $19.99</p>
+                    Fecha de publicación: 15 de marzo de 2021<br>
+                    Precio: $19.99</p>
             </div>
             <a href="#" class="btn btn-ver">Ver</a>
         </div>
@@ -247,8 +292,8 @@
             <div class="book-info">
                 <h5>Bajo el Cielo Infinito</h5>
                 <p>Género: Ciencia Ficción<br>
-                   Fecha de publicación: 28 de julio de 2019<br>
-                   Precio: $24.50</p>
+                    Fecha de publicación: 28 de julio de 2019<br>
+                    Precio: $24.50</p>
             </div>
             <a href="#" class="btn btn-ver">Ver</a>
         </div>
@@ -257,14 +302,14 @@
             <div class="book-info">
                 <h5>Raíces del Corazón</h5>
                 <p>Género: Romance<br>
-                   Fecha de publicación: 10 de octubre de 2023<br>
-                   Precio: $14.75</p>
+                    Fecha de publicación: 10 de octubre de 2023<br>
+                    Precio: $14.75</p>
             </div>
             <a href="#" class="btn btn-ver">Ver</a>
         </div>
     </section>
 
-    
+
     <footer class="footer">
         <div class="container">
             <div class="footer-social">
@@ -296,11 +341,40 @@
         </div>
     </footer>
 
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = localStorage.getItem('loggedIn');
+            const loginButton = document.getElementById('login-button');
+            const registerButton = document.getElementById('register-button');
+            const adminButton = document.getElementById('admin-button');
+            const logoutButton = document.getElementById('logout-button');
+
+            if (isLoggedIn) {
+                loginButton.style.display = 'none';
+                registerButton.style.display = 'none';
+                logoutButton.style.display = 'block';
+                adminButton.style.display = 'block';
+            } else {
+                loginButton.style.display = 'block';
+                registerButton.style.display = 'block';
+                logoutButton.style.display = 'none';
+                adminButton.style.display = 'none';
+            }
+
+            // Manejo del cierre de sesión
+            document.getElementById('logout').addEventListener('click', function () {
+                localStorage.removeItem('loggedIn');
+                window.location.reload(); // Recargar la página para actualizar el estado
+            });
+        });
+    </script>
 </body>
+
 </html>

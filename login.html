@@ -366,6 +366,16 @@
         });
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = localStorage.getItem('loggedIn');
+
+            if (isLoggedIn) {
+                window.location.replace("index.html");
+            }
+        });
+    </script>
+
 </body>
 
 </html>

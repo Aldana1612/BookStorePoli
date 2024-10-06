@@ -8,6 +8,18 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .btn-outline-primary.logout-button {
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .btn-outline-primary.logout-button:hover {
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+        }
+
         .login-container {
             display: flex;
             justify-content: center;
@@ -240,6 +252,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contacto</a>
                     </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" id="admin-button" style="display: none;" href="./admin.html">Administrar</a>
+                    </li>
                     <li class="nav-item" id="register-button">
                         <a class="btn btn-outline-primary ml-2 custom-button" href="./register.html">Registrarse</a>
                     </li>
@@ -247,7 +262,7 @@
                         <a class="btn btn-primary ml-2 custom-button" href="./login.html">Iniciar sesión</a>
                     </li>
                     <li class="nav-item" id="logout-button" style="display: none;">
-                        <button class="btn btn-danger ml-2 custom-button" id="logout">Cerrar sesión</button>
+                        <button class="btn btn-outline-primary ml-2 custom-button logout-button" id="logout">Cerrar sesión</button>
                     </li>
                 </ul>
             </div>
@@ -378,24 +393,27 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const isLoggedIn = localStorage.getItem('loggedIn');
             const loginButton = document.getElementById('login-button');
             const registerButton = document.getElementById('register-button');
+            const adminButton = document.getElementById('admin-button');
             const logoutButton = document.getElementById('logout-button');
-    
+
             if (isLoggedIn) {
                 loginButton.style.display = 'none';
                 registerButton.style.display = 'none';
                 logoutButton.style.display = 'block';
+                adminButton.style.display = 'block';
             } else {
                 loginButton.style.display = 'block';
                 registerButton.style.display = 'block';
                 logoutButton.style.display = 'none';
+                adminButton.style.display = 'none';
             }
-    
+
             // Manejo del cierre de sesión
-            document.getElementById('logout').addEventListener('click', function() {
+            document.getElementById('logout').addEventListener('click', function () {
                 localStorage.removeItem('loggedIn');
                 window.location.reload(); // Recargar la página para actualizar el estado
             });
