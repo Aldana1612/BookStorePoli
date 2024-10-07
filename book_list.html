@@ -8,6 +8,49 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .book-list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .book-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            /* Ajusta el ancho según prefieras */
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .book-item img {
+            width: 150px;
+            /* Tamaño fijo de ancho */
+            height: 220px;
+            /* Tamaño fijo de alto */
+            object-fit: cover;
+            /* Ajusta la imagen al tamaño sin distorsionar */
+        }
+
+        .book-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn-ver {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-ver:hover {
+            background-color: #0056b3;
+        }
+
         .btn-outline-primary.logout-button {
             color: black;
             background-color: white;
@@ -278,7 +321,7 @@
 
     <section class="container book-list">
         <div class="book-item">
-            <img src="img/default-book.png" alt="Portada de El Eco del Silencio">
+            <img src="img/elecodelsilencio.jpg" alt="Portada de El Eco del Silencio">
             <div class="book-info">
                 <h5>El Eco del Silencio</h5>
                 <p>Género: Misterio<br>
@@ -288,7 +331,7 @@
             <a href="#" class="btn btn-ver">Ver</a>
         </div>
         <div class="book-item">
-            <img src="img/default-book.png" alt="Portada de Bajo el Cielo Infinito">
+            <img src="img/BajoelCieloInfinito.jpg" alt="Portada de Bajo el Cielo Infinito">
             <div class="book-info">
                 <h5>Bajo el Cielo Infinito</h5>
                 <p>Género: Ciencia Ficción<br>
@@ -298,7 +341,7 @@
             <a href="#" class="btn btn-ver">Ver</a>
         </div>
         <div class="book-item">
-            <img src="img/default-book.png" alt="Portada de Raíces del Corazón">
+            <img src="img/raicesdelcorazon.webp" alt="Portada de Raíces del Corazón">
             <div class="book-info">
                 <h5>Raíces del Corazón</h5>
                 <p>Género: Romance<br>
