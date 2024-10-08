@@ -329,38 +329,43 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script>
-        // Esperamos al evento submit del formulario
-        document.getElementById('register-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+        document.querySelector(".login-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evitar el envío del formulario
 
-            // Capturamos los valores de los campos
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            // Obtener los valores de los campos
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+            errorMessage.textContent = ""; // Limpiar el mensaje de error
 
-            // Creamos el objeto que vamos a enviar en el cuerpo de la solicitud
-            const data = {
-                email: email,
-                password: password
-            };
+            // Validar que los campos no estén vacíos
+            if (!email || !password) {
+                errorMessage.textContent = "Por favor, complete todos los campos.";
+                return;
+            }
 
-            // Hacemos la petición POST usando fetch
-            fetch('http://localhost:3000/users', {  // Cambia la URL según tu configuración de JSON Server
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data) // Convertimos el objeto JS a JSON
-            })
+            // Hacer una petición para obtener los usuarios desde el archivo JSON
+            fetch('users.json') // Cambia esta URL si el archivo está en un directorio diferente
                 .then(response => response.json())
                 .then(data => {
-                    alert('Registro exitoso');
-                    console.log('Success:', data);
+                    const user = data.find(user => user.email === email && user.password === password);
+
+                    if (user) {
+                        // Guardar el estado de sesión
+                        localStorage.setItem('loggedIn', 'true');
+                        // Redirigir a la página de inicio
+                        window.location.replace("index.html");
+                    } else {
+                        errorMessage.textContent = "Credenciales incorrectas. Por favor, intente de nuevo.";
+                    }
                 })
-                .catch((error) => {
+                .catch(error => {
                     console.error('Error:', error);
+                    errorMessage.textContent = "Ocurrió un error al intentar iniciar sesión. Por favor, inténtelo más tarde.";
                 });
         });
     </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
