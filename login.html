@@ -345,23 +345,13 @@
                 return;
             }
 
-            // Hacer una petición a JSONPlaceholder para obtener los usuarios
-            fetch('https://jsonplaceholder.typicode.com/users')
+            // Hacer una petición para obtener los usuarios desde el archivo JSON
+            fetch('users.json') // Cambia esta URL si el archivo está en un directorio diferente
                 .then(response => response.json())
                 .then(data => {
-                    // Simulando contraseñas para los usuarios
-                    const simulatedPasswords = {
-                        "Sincere@april.biz": "password123",
-                        "Shanna@melissa.tv": "password456",
-                        "Nathan@yesenia.net": "password789",
-                        "Julianne.OConner@kory.org": "password000"
-                    };
+                    const user = data.find(user => user.email === email && user.password === password);
 
-                    const userExists = data.some(user =>
-                        user.email === email && simulatedPasswords[user.email] === password
-                    );
-
-                    if (userExists) {
+                    if (user) {
                         // Guardar el estado de sesión
                         localStorage.setItem('loggedIn', 'true');
                         // Redirigir a la página de inicio
@@ -376,6 +366,7 @@
                 });
         });
     </script>
+
 
 
     <script>
